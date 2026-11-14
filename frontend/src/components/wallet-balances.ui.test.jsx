@@ -8,6 +8,8 @@ const balances = { available: '20.00', escrow: '10.00', incoming_escrow: '5.00',
 function card(title) { return within(screen.getByRole('heading', { name: title }).closest('section')) }
 test('website funds move from escrow to available and account wallet stays separate', () => {
   const { rerender } = render(<MemoryRouter><WalletBalances balances={balances} /></MemoryRouter>)
+  expect(card('Available Balance').getByText('20.00')).toBeTruthy()
+  fireEvent.click(screen.getByRole('button', { name: 'Website sandbox' }))
   expect(card('Escrow Balance').getByText('100.00')).toBeTruthy()
   expect(card('Available Balance').getByText('0.00')).toBeTruthy()
   const released = { ...balances, website_sandbox: { application_count: 1, available: '99.00', escrow: '0.00' } }

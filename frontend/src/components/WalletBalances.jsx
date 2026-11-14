@@ -5,7 +5,7 @@ export default function WalletBalances({ balances, busy, showStatements, onState
   const [view, setView] = useState(null)
   const website = balances?.website_sandbox
   const hasWebsite = website?.application_count > 0
-  const selected = view || (balances?.payment_mode === 'daraja_live' ? 'account' : 'sandbox')
+  const selected = view || 'account'
   const sandbox = hasWebsite && selected === 'sandbox'
   const available = sandbox ? website.available : balances?.available
   const held = sandbox ? website.escrow : balances

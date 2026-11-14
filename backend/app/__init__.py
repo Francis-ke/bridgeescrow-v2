@@ -34,6 +34,14 @@ def create_app(overrides: dict | None = None) -> Flask:
     register_errors(app)
     register_blueprints(app)
 
+    @app.after_request
+    def private_responses(response):
+        from flask import request
+        if request.headers.get('Authorization'):
+            response.headers['Cache-Control'] = 'private, no-store'
+            response.vary.add('Authorization')
+        return response
+
     @app.get("/api/health")
     def health():
         return {"status": "ok", "service": "bridgeescrow-v2"}

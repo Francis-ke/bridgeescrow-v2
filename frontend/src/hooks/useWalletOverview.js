@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { wallet } from '../api/endpoints'
 
-export function useWalletOverview() {
+export function useWalletOverview(userId) {
   const location = useLocation()
   const [balances, setBalances] = useState(null)
   const [entries, setEntries] = useState(null)
@@ -16,7 +16,7 @@ export function useWalletOverview() {
       if (showStatements) wallet.ledger().then(({ entries: value }) => {
         if (active) setEntries(value)
       }).catch((err) => { if (active) setError(err.message) })
-      wallet.get().then(({ wallet: value }) => { if (active) { setBalances(value); setError('') } })
+      wallet.get().then(({ wallet: value }) => { if (active && value.user_id === userId) { setBalances(value); setError('') } })
         .catch((err) => { if (active) setError(err.message) })
     }
     loadBalances()
@@ -28,7 +28,7 @@ export function useWalletOverview() {
       window.removeEventListener('focus', loadBalances)
       window.removeEventListener('account-updated', loadBalances)
     }
-  }, [showStatements])
+  }, [showStatements, userId])
 
   useEffect(() => {
     if (new URLSearchParams(location.search).get('statements') !== '1') return

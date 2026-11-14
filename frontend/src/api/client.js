@@ -18,6 +18,7 @@ export async function request(path, { method = 'GET', body, auth = true, headers
   if (requestToken) headers.Authorization = `Bearer ${requestToken}`
   const res = await fetch(`${BASE}/api${path}`, {
     method,
+    cache: 'no-store',
     headers,
     body: body === undefined ? undefined : JSON.stringify(body),
   })

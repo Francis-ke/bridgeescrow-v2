@@ -7,9 +7,14 @@ import QuickActions from '../components/QuickActions'
 
 export default function Dashboard() {
   const { user } = useAuth()
-  const { balances, entries, showStatements, busy, error, statements } = useWalletOverview()
+  return <AccountDashboard key={user.id} user={user} />
+}
+
+function AccountDashboard({ user }) {
+  const { balances, entries, showStatements, busy, error, statements } = useWalletOverview(user.id)
   return (
     <div className="space-y-6 sm:space-y-8">
+      <p className="text-sm text-slate-400">{user.full_name} · Account {user.account_number}</p>
       <Alert>{error}</Alert>
       <div className="grid items-center gap-6 lg:grid-cols-[minmax(0,450px)_minmax(0,1fr)] lg:gap-8">
         <div className="mx-auto w-full max-w-[450px]">

@@ -9,17 +9,33 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     let active = true
-    const sessionToken = localStorage.getItem('be_token')
+    let sessionToken = localStorage.getItem('be_token')
     const expired = () => { localStorage.removeItem('be_token'); setUser(null) }
     window.addEventListener('session-expired', expired)
-    if (!sessionToken) setLoading(false)
-    else auth.me().then((data) => {
-      if (active && sessionToken === localStorage.getItem('be_token')) setUser(data.user)
-    }).catch((error) => {
-      if (active && [401, 403].includes(error.status) &&
-          sessionToken === localStorage.getItem('be_token')) expired()
-    }).finally(() => { if (active) setLoading(false) })
-    return () => { active = false; window.removeEventListener('session-expired', expired) }
+    async function restore() {
+      sessionToken = localStorage.getItem('be_token')
+      const restoring = sessionToken
+      setUser(null); setLoading(true)
+      try {
+        if (restoring) {
+          const data = await auth.me()
+          if (active && restoring === localStorage.getItem('be_token')) setUser(data.user)
+        }
+      } catch (error) {
+        if (active && [401, 403].includes(error.status) &&
+            restoring === localStorage.getItem('be_token')) expired()
+      } finally {
+        if (active && restoring === localStorage.getItem('be_token')) setLoading(false)
+        else if (active && !localStorage.getItem('be_token')) setLoading(false)
+      }
+    }
+    const changed = (event) => { if (event.key === 'be_token' || event.key === null) restore() }
+    window.addEventListener('storage', changed)
+    restore()
+    return () => {
+      active = false; window.removeEventListener('session-expired', expired)
+      window.removeEventListener('storage', changed)
+    }
   }, [])
 
   useEffect(() => {
@@ -31,12 +47,12 @@ export function AuthProvider({ children }) {
 
   function signIn(session) {
     localStorage.setItem('be_token', session.token)
-    setUser(session.user)
+    setUser(session.user); setLoading(false)
   }
 
   function signOut() {
     localStorage.removeItem('be_token')
-    setUser(null)
+    setUser(null); setLoading(false)
   }
 
   const value = useMemo(() => ({ user, loading, signIn, signOut, updateUser: setUser }), [user, loading])
