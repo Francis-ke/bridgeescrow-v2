@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+backend/.runtime/
+**/__pycache__/
+backend/.venv/
+frontend/node_modules/
+frontend/dist/
+
+# Private deployment configuration and database backups
+deploy/production.env
+backups/

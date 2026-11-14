@@ -1,0 +1,484 @@
+
+> bridgeescrow-v2-frontend@2.0.0 dev
+> vite --host 127.0.0.1 --port 5173 --host 127.0.0.1 --port 5175
+
+
+  VITE v5.4.21  ready in 228 ms
+
+  ➜  Local:   http://127.0.0.1:5175/
+2:28:41 PM [vite] hmr update /src/pages/Dashboard.jsx, /src/index.css
+2:50:35 PM [vite] hmr update /src/context/AuthContext.jsx, /src/index.css, /src/pages/Login.jsx, /src/pages/Dashboard.jsx, /src/pages/Register.jsx, /src/pages/EscrowList.jsx, /src/pages/EscrowDetail.jsx, /src/pages/EscrowNew.jsx, /src/components/DepositForm.jsx, /src/components/EscrowActions.jsx, /src/components/ContractPanel.jsx, /src/components/DisputePanel.jsx
+2:50:35 PM [vite] hmr invalidate /src/context/AuthContext.jsx Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+2:50:35 PM [vite] page reload src/context/AuthContext.jsx
+2:51:38 PM [vite] hmr update /src/pages/Register.jsx, /src/index.css
+2:51:58 PM [vite] hmr update /src/pages/Register.jsx
+2:52:02 PM [vite] hmr update /src/pages/Login.jsx, /src/index.css
+2:52:16 PM [vite] hmr update /src/pages/Login.jsx
+2:52:45 PM [vite] hmr update /src/App.jsx, /src/index.css
+3:08:21 PM [vite] hmr update /src/pages/Login.jsx, /src/index.css
+3:08:21 PM [vite] hmr update /src/pages/Register.jsx, /src/index.css
+3:08:21 PM [vite] hmr update /src/pages/ForgotPassword.jsx, /src/index.css
+3:08:21 PM [vite] hmr update /src/components/OtpPanel.jsx, /src/index.css
+3:20:26 PM [vite] vite.config.js changed, restarting server...
+3:20:26 PM [vite] .env.local changed, restarting server...
+3:20:26 PM [vite] server restarted.
+3:39:47 PM [vite] vite.config.js changed, restarting server...
+3:39:47 PM [vite] .env.local changed, restarting server...
+3:39:47 PM [vite] server restarted.
+3:57:04 PM [vite] page reload index.html
+4:04:25 PM [vite] hmr update /src/components/VirtualCard.jsx, /src/index.css
+4:05:30 PM [vite] hmr update /src/components/VirtualCard.jsx, /src/index.css
+4:05:30 PM [vite] hmr update /src/pages/Dashboard.jsx, /src/index.css
+4:06:40 PM [vite] hmr update /src/pages/Dashboard.jsx, /src/index.css
+4:06:40 PM [vite] hmr update /src/components/VirtualCard.jsx, /src/index.css
+7:04:56 PM [vite] hmr update /src/pages/Login.jsx, /src/index.css
+7:12:35 PM [vite] hmr update /src/components/Shell.jsx, /src/index.css
+7:16:02 PM [vite] hmr update /src/components/VirtualCard.jsx, /src/index.css
+7:17:02 PM [vite] hmr update /src/components/VirtualCard.jsx, /src/index.css
+7:25:22 PM [vite] hmr update /src/pages/Dashboard.jsx, /src/index.css
+7:27:49 PM [vite] hmr update /src/components/BalanceCard.jsx, /src/index.css
+7:34:07 PM [vite] hmr update /src/pages/EscrowList.jsx, /src/index.css
+7:34:07 PM [vite] hmr update /src/context/AuthContext.jsx, /src/index.css, /src/pages/Login.jsx, /src/pages/ForgotPassword.jsx, /src/pages/Register.jsx, /src/pages/EscrowList.jsx, /src/pages/EscrowNew.jsx, /src/pages/EscrowDetail.jsx, /src/components/DepositForm.jsx, /src/components/EscrowActions.jsx, /src/components/ContractPanel.jsx, /src/components/DisputePanel.jsx, /src/pages/Dashboard.jsx
+7:34:07 PM [vite] hmr invalidate /src/context/AuthContext.jsx Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+7:34:07 PM [vite] page reload src/context/AuthContext.jsx
+7:39:09 PM [vite] hmr update /src/components/EscrowRow.jsx, /src/index.css
+7:39:09 PM [vite] hmr update /src/pages/EscrowDetail.jsx, /src/index.css
+7:39:50 PM [vite] hmr update /src/components/EscrowRow.jsx, /src/index.css
+7:40:44 PM [vite] hmr update /src/components/TransactionDetails.jsx, /src/index.css
+7:42:11 PM [vite] hmr update /src/context/AuthContext.jsx, /src/index.css, /src/pages/Login.jsx, /src/pages/ForgotPassword.jsx, /src/pages/Register.jsx, /src/pages/EscrowList.jsx, /src/pages/EscrowNew.jsx, /src/pages/EscrowDetail.jsx, /src/components/DepositForm.jsx, /src/components/EscrowActions.jsx, /src/components/ContractPanel.jsx, /src/components/DisputePanel.jsx, /src/pages/Dashboard.jsx
+7:42:11 PM [vite] hmr invalidate /src/context/AuthContext.jsx Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+7:42:11 PM [vite] page reload src/context/AuthContext.jsx
+7:42:43 PM [vite] hmr update /src/components/EscrowRow.jsx, /src/index.css
+7:42:43 PM [vite] hmr update /src/pages/EscrowList.jsx, /src/index.css
+7:42:43 PM [vite] hmr update /src/pages/EscrowDetail.jsx, /src/index.css
+7:42:43 PM [vite] hmr update /src/components/TransactionDetails.jsx, /src/index.css
+7:42:43 PM [vite] hmr update /src/components/EscrowActions.jsx, /src/index.css
+7:45:14 PM [vite] hmr update /src/context/AuthContext.jsx, /src/index.css, /src/pages/Login.jsx, /src/pages/ForgotPassword.jsx, /src/pages/Register.jsx, /src/pages/EscrowList.jsx, /src/pages/EscrowNew.jsx, /src/pages/EscrowDetail.jsx, /src/components/DepositForm.jsx, /src/components/EscrowActions.jsx, /src/components/ContractPanel.jsx, /src/components/DisputePanel.jsx, /src/pages/Dashboard.jsx, /src/components/ReceiptHoldForm.jsx
+7:45:15 PM [vite] hmr invalidate /src/context/AuthContext.jsx Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+7:45:15 PM [vite] page reload src/context/AuthContext.jsx
+7:45:44 PM [vite] hmr update /src/components/Shell.jsx, /src/index.css
+7:46:37 PM [vite] hmr update /src/context/AuthContext.jsx, /src/index.css, /src/pages/Login.jsx, /src/pages/ForgotPassword.jsx, /src/pages/Register.jsx, /src/pages/EscrowList.jsx, /src/pages/EscrowNew.jsx, /src/pages/EscrowDetail.jsx, /src/components/DepositForm.jsx, /src/components/EscrowActions.jsx, /src/components/ContractPanel.jsx, /src/components/DisputePanel.jsx, /src/pages/Dashboard.jsx, /src/components/ReceiptHoldForm.jsx, /src/components/NotificationBell.jsx
+7:46:38 PM [vite] hmr invalidate /src/context/AuthContext.jsx Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+7:46:38 PM [vite] page reload src/context/AuthContext.jsx
+7:47:05 PM [vite] hmr update /src/components/ReceiptHoldForm.jsx, /src/index.css
+7:47:05 PM [vite] hmr update /src/components/TransactionDetails.jsx, /src/index.css
+7:47:05 PM [vite] hmr update /src/components/EscrowRow.jsx, /src/index.css
+7:47:05 PM [vite] hmr update /src/pages/EscrowDetail.jsx, /src/index.css
+7:49:35 PM [vite] hmr update /src/App.jsx, /src/index.css
+7:49:35 PM [vite] hmr update /src/components/Shell.jsx, /src/index.css
+7:49:35 PM [vite] hmr update /src/pages/EscrowList.jsx, /src/index.css
+7:49:36 PM [vite] hmr update /src/pages/EscrowNew.jsx, /src/index.css
+7:51:01 PM [vite] hmr update /src/components/NotificationBell.jsx, /src/index.css
+7:52:34 PM [vite] hmr update /src/context/AuthContext.jsx, /src/index.css, /src/pages/Login.jsx, /src/pages/ForgotPassword.jsx, /src/pages/Register.jsx, /src/pages/EscrowList.jsx, /src/pages/EscrowDetail.jsx, /src/components/DepositForm.jsx, /src/components/EscrowActions.jsx, /src/components/ContractPanel.jsx, /src/components/DisputePanel.jsx, /src/pages/Dashboard.jsx, /src/components/ReceiptHoldForm.jsx, /src/components/NotificationBell.jsx, /src/components/HoldDecision.jsx
+7:52:34 PM [vite] hmr update /src/pages/EscrowList.jsx, /src/index.css
+7:52:34 PM [vite] hmr invalidate /src/context/AuthContext.jsx Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+7:52:34 PM [vite] page reload src/context/AuthContext.jsx
+7:53:55 PM [vite] hmr update /src/pages/EscrowList.jsx, /src/index.css
+7:53:55 PM [vite] hmr update /src/App.jsx, /src/index.css
+8:05:11 PM [vite] hmr update /src/pages/Dashboard.jsx, /src/index.css
+8:05:11 PM [vite] hmr update /src/App.jsx, /src/index.css
+8:06:05 PM [vite] hmr update /src/components/Shell.jsx, /src/index.css
+8:06:05 PM [vite] hmr update /src/pages/PaymentAction.jsx, /src/index.css
+8:06:05 PM [vite] hmr update /src/pages/Withdraw.jsx, /src/index.css
+8:06:05 PM [vite] hmr update /src/pages/EscrowList.jsx, /src/index.css
+8:06:52 PM [vite] hmr update /src/components/QuickActions.jsx, /src/index.css
+8:06:52 PM [vite] hmr update /src/App.jsx, /src/index.css
+8:06:52 PM [vite] hmr update /src/components/DepositForm.jsx, /src/index.css
+8:06:52 PM [vite] hmr update /src/components/DepositForm.jsx, /src/index.css
+8:30:40 PM [vite] hmr update /src/components/VirtualCard.jsx, /src/index.css
+8:30:40 PM [vite] hmr update /src/pages/Dashboard.jsx, /src/index.css
+8:38:00 PM [vite] hmr update /src/components/VirtualCard.jsx, /src/index.css
+8:38:00 PM [vite] hmr update /src/context/AuthContext.jsx, /src/index.css
+8:38:00 PM [vite] hmr invalidate /src/context/AuthContext.jsx Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+8:38:00 PM [vite] page reload src/context/AuthContext.jsx
+8:41:41 PM [vite] hmr update /src/components/TransactionDetails.jsx, /src/index.css
+8:43:48 PM [vite] hmr update /src/components/VirtualCard.jsx, /src/index.css
+8:43:48 PM [vite] hmr update /src/pages/Dashboard.jsx, /src/index.css
+8:43:48 PM [vite] hmr update /src/context/AuthContext.jsx, /src/index.css
+8:43:48 PM [vite] hmr invalidate /src/context/AuthContext.jsx Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+8:43:48 PM [vite] page reload src/context/AuthContext.jsx
+8:45:52 PM [vite] hmr update /src/pages/Dashboard.jsx, /src/index.css
+8:45:52 PM [vite] hmr update /src/components/VirtualCard.jsx, /src/index.css
+8:45:52 PM [vite] hmr update /src/components/BalanceCard.jsx, /src/index.css
+8:45:52 PM [vite] hmr update /src/components/QuickActions.jsx, /src/index.css
+8:46:12 PM [vite] hmr update /src/pages/Dashboard.jsx, /src/index.css
+9:11:56 PM [vite] hmr update /src/pages/PaymentAction.jsx, /src/index.css
+9:11:56 PM [vite] hmr update /src/pages/Deposit.jsx, /src/index.css
+9:11:56 PM [vite] hmr update /src/pages/Withdraw.jsx, /src/index.css
+9:18:10 PM [vite] hmr update /src/components/CardEntry.jsx, /src/index.css
+9:18:10 PM [vite] hmr update /src/components/MpesaMethod.jsx, /src/index.css
+9:18:10 PM [vite] hmr update /src/components/PaymentMethods.jsx, /src/index.css
+9:18:10 PM [vite] hmr update /src/pages/PaymentAction.jsx, /src/index.css
+9:18:10 PM [vite] hmr update /src/pages/Deposit.jsx, /src/index.css
+9:18:10 PM [vite] hmr update /src/pages/Withdraw.jsx, /src/index.css
+9:19:39 PM [vite] hmr update /src/components/CardEntry.jsx, /src/index.css
+9:22:37 PM [vite] hmr update /src/components/CardEntry.jsx, /src/index.css
+9:22:37 PM [vite] hmr update /src/components/DemoReceipt.jsx, /src/index.css
+9:24:40 PM [vite] hmr update /src/pages/PaymentAction.jsx, /src/index.css
+9:24:40 PM [vite] hmr update /src/pages/Withdraw.jsx, /src/index.css
+9:24:40 PM [vite] hmr update /src/components/PaymentMethods.jsx, /src/index.css
+9:26:01 PM [vite] hmr update /src/components/MpesaMethod.jsx, /src/index.css
+9:27:08 PM [vite] hmr update /src/components/CardEntry.jsx, /src/index.css
+9:31:18 PM [vite] hmr update /src/context/AuthContext.jsx, /src/index.css, /src/pages/Login.jsx, /src/pages/ForgotPassword.jsx, /src/pages/Register.jsx, /src/pages/EscrowList.jsx, /src/pages/EscrowDetail.jsx, /src/components/DepositForm.jsx, /src/components/EscrowActions.jsx, /src/components/ContractPanel.jsx, /src/components/DisputePanel.jsx, /src/pages/Dashboard.jsx, /src/components/ReceiptHoldForm.jsx, /src/components/NotificationBell.jsx, /src/components/HoldDecision.jsx
+9:31:18 PM [vite] hmr update /src/components/PaymentMethods.jsx, /src/index.css
+9:31:18 PM [vite] hmr update /src/components/CardEntry.jsx, /src/index.css
+9:31:18 PM [vite] hmr update /src/components/MpesaMethod.jsx, /src/index.css
+9:31:18 PM [vite] hmr update /src/components/DemoReceipt.jsx, /src/index.css
+9:31:18 PM [vite] hmr update /src/components/NotificationBell.jsx, /src/index.css
+9:31:19 PM [vite] hmr invalidate /src/context/AuthContext.jsx Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+9:31:19 PM [vite] page reload src/context/AuthContext.jsx
+9:32:15 PM [vite] hmr update /src/pages/Dashboard.jsx, /src/index.css
+9:32:41 PM [vite] page reload src/api/demoCheckout.js
+9:32:41 PM [vite] page reload src/api/demoCheckout.test.js
+9:32:41 PM [vite] hmr update /src/components/PaymentMethods.jsx, /src/index.css
+9:32:41 PM [vite] hmr update /src/components/CardEntry.jsx, /src/index.css
+9:32:41 PM [vite] hmr update /src/components/MpesaMethod.jsx, /src/index.css
+9:33:30 PM [vite] hmr update /src/pages/Dashboard.jsx, /src/index.css
+9:33:59 PM [vite] hmr update /src/components/DemoReceipt.jsx, /src/index.css
+9:36:42 PM [vite] hmr update /src/components/NotificationBell.jsx, /src/index.css
+9:36:42 PM [vite] hmr update /src/pages/Dashboard.jsx, /src/index.css
+9:37:11 PM [vite] hmr update /src/pages/Dashboard.jsx, /src/index.css
+9:43:09 PM [vite] hmr update /src/components/CardEntry.jsx, /src/index.css
+9:43:09 PM [vite] hmr update /src/components/MpesaMethod.jsx, /src/index.css
+9:43:09 PM [vite] hmr update /src/components/PaymentMethods.jsx, /src/index.css
+9:43:09 PM [vite] hmr update /src/components/EscrowActions.jsx, /src/index.css
+9:43:09 PM [vite] hmr update /src/components/DepositForm.jsx, /src/index.css
+9:43:09 PM [vite] hmr update /src/context/AuthContext.jsx, /src/index.css, /src/pages/Login.jsx, /src/pages/ForgotPassword.jsx, /src/pages/Register.jsx, /src/pages/EscrowList.jsx, /src/pages/EscrowDetail.jsx, /src/components/DepositForm.jsx, /src/components/EscrowActions.jsx, /src/components/ContractPanel.jsx, /src/components/DisputePanel.jsx, /src/pages/Dashboard.jsx, /src/components/ReceiptHoldForm.jsx, /src/components/NotificationBell.jsx, /src/components/HoldDecision.jsx, /src/components/PaymentMethods.jsx
+9:43:09 PM [vite] hmr update /src/components/DemoReceipt.jsx, /src/index.css
+9:43:09 PM [vite] hmr invalidate /src/context/AuthContext.jsx Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+9:43:09 PM [vite] page reload src/context/AuthContext.jsx
+9:44:11 PM [vite] hmr update /src/components/NotificationBell.jsx, /src/index.css
+10:07:32 PM [vite] hmr update /src/App.jsx, /src/index.css
+10:07:32 PM [vite] hmr update /src/pages/EscrowDetail.jsx, /src/index.css
+10:07:32 PM [vite] hmr update /src/components/EscrowRow.jsx, /src/index.css
+10:07:32 PM [vite] hmr update /src/components/ReceiptHoldForm.jsx, /src/index.css
+10:07:32 PM [vite] hmr update /src/components/HoldDecision.jsx, /src/index.css
+10:07:32 PM [vite] hmr update /src/components/Shell.jsx, /src/index.css
+10:11:48 PM [vite] hmr update /src/components/protected/DisputeResolution.jsx, /src/index.css
+10:11:48 PM [vite] hmr update /src/components/protected/CategoryReport.jsx, /src/index.css
+10:11:48 PM [vite] Internal server error: /home/francis/Downloads/bridgeescrow-v2/frontend/src/components/protected/DisputeResolution.jsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (22:6)
+
+  20 |         <option value="resume">{dispute.protected ? "Resume agreed workflow" : "Close dispute"}</option>{dispute.protected && <><option value="release">Release remaining funds</option>
+  21 |         <option value="refund">Refund remaining funds</option><option value="split">Split remaining funds</option></>
+> 22 |       </select>
+     |       ^
+  23 |     </label>
+  24 |     {outcome === 'split' && <Field label="Refund to client (%)" type="number" min="0" max="100" required value={percent} onChange={(e) => setPercent(Number(e.target.value))} />}
+  25 |     <Field label="Resolution reason" required minLength={10} maxLength={400} value={reason} onChange={(e) => setReason(e.target.value)} />
+  Plugin: vite:react-babel
+  File: /home/francis/Downloads/bridgeescrow-v2/frontend/src/components/protected/DisputeResolution.jsx:22:6
+  20 |          <option value="resume">{dispute.protected ? "Resume agreed workflow" : "Close dispute"}</option>{dispute.protected && <><option value="release">Release remaining funds</option>
+  21 |          <option value="refund">Refund remaining funds</option><option value="split">Split remaining funds</option></>
+  22 |        </select>
+     |        ^
+  23 |      </label>
+  24 |      {outcome === 'split' && <Field label="Refund to client (%)" type="number" min="0" max="100" required value={percent} onChange={(e) => setPercent(Number(e.target.value))} />}
+      at constructor (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:369:19)
+      at JSXParserMixin.raise (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:6632:19)
+      at JSXParserMixin.jsxParseElementAt (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:4759:18)
+      at JSXParserMixin.jsxParseElement (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:4766:17)
+      at JSXParserMixin.parseExprAtom (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:4776:19)
+      at JSXParserMixin.parseExprSubscripts (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:8068:23)
+      at JSXParserMixin.parseUpdate (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:8053:21)
+      at JSXParserMixin.parseMaybeUnary (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:8033:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7879:61)
+      at JSXParserMixin.parseExprOpBaseRightExpr (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7973:34)
+      at JSXParserMixin.parseExprOpRightExpr (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7968:21)
+      at JSXParserMixin.parseExprOp (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7934:27)
+      at JSXParserMixin.parseExprOps (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7888:17)
+      at JSXParserMixin.parseMaybeConditional (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7861:23)
+      at JSXParserMixin.parseMaybeAssign (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7809:21)
+      at JSXParserMixin.parseExpressionBase (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7757:23)
+      at /home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7753:39
+      at JSXParserMixin.allowInAnd (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9436:12)
+      at JSXParserMixin.parseExpression (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7753:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:4649:31)
+      at JSXParserMixin.jsxParseElementAt (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:4728:36)
+      at JSXParserMixin.jsxParseElementAt (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:4715:32)
+      at JSXParserMixin.jsxParseElementAt (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:4715:32)
+      at JSXParserMixin.jsxParseElement (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:4766:17)
+      at JSXParserMixin.parseExprAtom (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:4776:19)
+      at JSXParserMixin.parseExprSubscripts (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:8068:23)
+      at JSXParserMixin.parseUpdate (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:8053:21)
+      at JSXParserMixin.parseMaybeUnary (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:8033:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7879:61)
+      at JSXParserMixin.parseExprOps (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7884:23)
+      at JSXParserMixin.parseMaybeConditional (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7861:23)
+      at JSXParserMixin.parseMaybeAssign (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7809:21)
+      at JSXParserMixin.parseExpressionBase (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7757:23)
+      at /home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7753:39
+      at JSXParserMixin.allowInAnd (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9431:16)
+      at JSXParserMixin.parseExpression (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7753:17)
+      at JSXParserMixin.parseReturnStatement (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:10182:28)
+      at JSXParserMixin.parseStatementContent (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9825:21)
+      at JSXParserMixin.parseStatementLike (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9794:17)
+      at JSXParserMixin.parseStatementListItem (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9774:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:10356:61)
+      at JSXParserMixin.parseBlockBody (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:10349:10)
+      at JSXParserMixin.parseBlock (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:10337:10)
+      at JSXParserMixin.parseFunctionBody (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9105:24)
+      at JSXParserMixin.parseFunctionBodyAndFinish (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9091:10)
+      at /home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:10486:12
+      at JSXParserMixin.withSmartMixTopicForbiddingContext (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9413:14)
+      at JSXParserMixin.parseFunction (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:10485:10)
+      at JSXParserMixin.parseExportDefaultExpression (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:10946:19)
+      at JSXParserMixin.parseExport (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:10867:25)
+10:13:39 PM [vite] hmr update /src/components/NotificationBell.jsx, /src/index.css
+10:13:40 PM [vite] hmr update /src/components/Shell.jsx, /src/index.css
+10:13:40 PM [vite] hmr update /src/pages/Dashboard.jsx, /src/index.css
+10:13:40 PM [vite] page reload src/hooks/useWalletOverview.js
+10:13:40 PM [vite] page reload src/testSetup.js
+10:13:40 PM [vite] Internal server error: /home/francis/Downloads/bridgeescrow-v2/frontend/src/pages/Dashboard.jsx: Unexpected token (16:3)
+
+  14 |       window.removeEventListener('account-updated', loadBalances)
+  15 |     }
+> 16 |   }, [])
+     |    ^
+  17 |
+  18 |   useEffect(() => {
+  19 |     if (new URLSearchParams(location.search).get('statements') !== '1') return
+  Plugin: vite:react-babel
+  File: /home/francis/Downloads/bridgeescrow-v2/frontend/src/pages/Dashboard.jsx:16:3
+  14 |        window.removeEventListener('account-updated', loadBalances)
+  15 |      }
+  16 |    }, [])
+     |     ^
+  17 |  
+  18 |    useEffect(() => {
+      at constructor (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:369:19)
+      at JSXParserMixin.raise (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:6632:19)
+      at JSXParserMixin.unexpected (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:6652:16)
+      at JSXParserMixin.parseExprAtom (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:8445:22)
+      at JSXParserMixin.parseExprAtom (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:4781:20)
+      at JSXParserMixin.parseExprSubscripts (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:8068:23)
+      at JSXParserMixin.parseUpdate (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:8053:21)
+      at JSXParserMixin.parseMaybeUnary (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:8033:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7879:61)
+      at JSXParserMixin.parseExprOps (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7884:23)
+      at JSXParserMixin.parseMaybeConditional (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7861:23)
+      at JSXParserMixin.parseMaybeAssign (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7809:21)
+      at JSXParserMixin.parseExpressionBase (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7757:23)
+      at /home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7753:39
+      at JSXParserMixin.allowInAnd (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9431:16)
+      at JSXParserMixin.parseExpression (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7753:17)
+      at JSXParserMixin.parseStatementContent (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9928:23)
+      at JSXParserMixin.parseStatementLike (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9794:17)
+      at JSXParserMixin.parseModuleItem (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9771:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:10356:36)
+      at JSXParserMixin.parseBlockBody (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:10349:10)
+      at JSXParserMixin.parseProgram (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9633:10)
+      at JSXParserMixin.parseTopLevel (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9623:25)
+      at JSXParserMixin.parse (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:14896:25)
+      at parse (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:14930:38)
+      at parser (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/core/lib/transformation/normalize-file.js:51:37)
+      at normalizeFile.next (<anonymous>)
+      at run (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/core/lib/transformation/index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/core/lib/transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/gensync/index.js:261:32)
+      at /home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/gensync/index.js:223:11)
+      at /home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/gensync/index.js:189:28
+      at /home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+      at /home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/gensync/index.js:113:33
+      at step (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/gensync/index.js:287:14)
+      at /home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/gensync/index.js:223:11)
+10:13:40 PM [vite] Pre-transform error: /home/francis/Downloads/bridgeescrow-v2/frontend/src/pages/Dashboard.jsx: Unexpected token (16:3)
+
+  14 |       window.removeEventListener('account-updated', loadBalances)
+  15 |     }
+> 16 |   }, [])
+     |    ^
+  17 |
+  18 |   useEffect(() => {
+  19 |     if (new URLSearchParams(location.search).get('statements') !== '1') return
+10:13:40 PM [vite] Pre-transform error: /home/francis/Downloads/bridgeescrow-v2/frontend/src/components/protected/DisputeResolution.jsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (22:6)
+
+  20 |         <option value="resume">{dispute.protected ? "Resume agreed workflow" : "Close dispute"}</option>{dispute.protected && <><option value="release">Release remaining funds</option>
+  21 |         <option value="refund">Refund remaining funds</option><option value="split">Split remaining funds</option></>
+> 22 |       </select>
+     |       ^
+  23 |     </label>
+  24 |     {outcome === 'split' && <Field label="Refund to client (%)" type="number" min="0" max="100" required value={percent} onChange={(e) => setPercent(Number(e.target.value))} />}
+  25 |     <Field label="Resolution reason" required minLength={10} maxLength={400} value={reason} onChange={(e) => setReason(e.target.value)} />
+10:13:40 PM [vite] Internal server error: /home/francis/Downloads/bridgeescrow-v2/frontend/src/pages/Dashboard.jsx: Unexpected token (16:3)
+
+  14 |       window.removeEventListener('account-updated', loadBalances)
+  15 |     }
+> 16 |   }, [])
+     |    ^
+  17 |
+  18 |   useEffect(() => {
+  19 |     if (new URLSearchParams(location.search).get('statements') !== '1') return
+  Plugin: vite:react-babel
+  File: /home/francis/Downloads/bridgeescrow-v2/frontend/src/pages/Dashboard.jsx:16:3
+  14 |        window.removeEventListener('account-updated', loadBalances)
+  15 |      }
+  16 |    }, [])
+     |     ^
+  17 |  
+  18 |    useEffect(() => {
+      at constructor (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:369:19)
+      at JSXParserMixin.raise (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:6632:19)
+      at JSXParserMixin.unexpected (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:6652:16)
+      at JSXParserMixin.parseExprAtom (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:8445:22)
+      at JSXParserMixin.parseExprAtom (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:4781:20)
+      at JSXParserMixin.parseExprSubscripts (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:8068:23)
+      at JSXParserMixin.parseUpdate (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:8053:21)
+      at JSXParserMixin.parseMaybeUnary (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:8033:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7879:61)
+      at JSXParserMixin.parseExprOps (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7884:23)
+      at JSXParserMixin.parseMaybeConditional (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7861:23)
+      at JSXParserMixin.parseMaybeAssign (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7809:21)
+      at JSXParserMixin.parseExpressionBase (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7757:23)
+      at /home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7753:39
+      at JSXParserMixin.allowInAnd (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9431:16)
+      at JSXParserMixin.parseExpression (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7753:17)
+      at JSXParserMixin.parseStatementContent (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9928:23)
+      at JSXParserMixin.parseStatementLike (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9794:17)
+      at JSXParserMixin.parseModuleItem (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9771:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:10356:36)
+      at JSXParserMixin.parseBlockBody (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:10349:10)
+      at JSXParserMixin.parseProgram (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9633:10)
+      at JSXParserMixin.parseTopLevel (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9623:25)
+      at JSXParserMixin.parse (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:14896:25)
+      at parse (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:14930:38)
+      at parser (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/core/lib/transformation/normalize-file.js:51:37)
+      at normalizeFile.next (<anonymous>)
+      at run (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/core/lib/transformation/index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/core/lib/transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/gensync/index.js:261:32)
+      at /home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/gensync/index.js:223:11)
+      at /home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/gensync/index.js:189:28
+      at /home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+      at /home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/gensync/index.js:113:33
+      at step (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/gensync/index.js:287:14)
+      at /home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/gensync/index.js:223:11)
+10:17:19 PM [vite] page reload src/hooks/useWalletOverview.js
+10:17:19 PM [vite] hmr update /src/pages/Dashboard.jsx, /src/index.css
+10:17:20 PM [vite] Internal server error: /home/francis/Downloads/bridgeescrow-v2/frontend/src/components/protected/DisputeResolution.jsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (22:6)
+
+  20 |         <option value="resume">{dispute.protected ? "Resume agreed workflow" : "Close dispute"}</option>{dispute.protected && <><option value="release">Release remaining funds</option>
+  21 |         <option value="refund">Refund remaining funds</option><option value="split">Split remaining funds</option></>
+> 22 |       </select>
+     |       ^
+  23 |     </label>
+  24 |     {outcome === 'split' && <Field label="Refund to client (%)" type="number" min="0" max="100" required value={percent} onChange={(e) => setPercent(Number(e.target.value))} />}
+  25 |     <Field label="Resolution reason" required minLength={10} maxLength={400} value={reason} onChange={(e) => setReason(e.target.value)} />
+  Plugin: vite:react-babel
+  File: /home/francis/Downloads/bridgeescrow-v2/frontend/src/components/protected/DisputeResolution.jsx:22:6
+  20 |          <option value="resume">{dispute.protected ? "Resume agreed workflow" : "Close dispute"}</option>{dispute.protected && <><option value="release">Release remaining funds</option>
+  21 |          <option value="refund">Refund remaining funds</option><option value="split">Split remaining funds</option></>
+  22 |        </select>
+     |        ^
+  23 |      </label>
+  24 |      {outcome === 'split' && <Field label="Refund to client (%)" type="number" min="0" max="100" required value={percent} onChange={(e) => setPercent(Number(e.target.value))} />}
+      at constructor (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:369:19)
+      at JSXParserMixin.raise (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:6632:19)
+      at JSXParserMixin.jsxParseElementAt (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:4759:18)
+      at JSXParserMixin.jsxParseElement (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:4766:17)
+      at JSXParserMixin.parseExprAtom (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:4776:19)
+      at JSXParserMixin.parseExprSubscripts (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:8068:23)
+      at JSXParserMixin.parseUpdate (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:8053:21)
+      at JSXParserMixin.parseMaybeUnary (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:8033:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7879:61)
+      at JSXParserMixin.parseExprOpBaseRightExpr (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7973:34)
+      at JSXParserMixin.parseExprOpRightExpr (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7968:21)
+      at JSXParserMixin.parseExprOp (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7934:27)
+      at JSXParserMixin.parseExprOps (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7888:17)
+      at JSXParserMixin.parseMaybeConditional (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7861:23)
+      at JSXParserMixin.parseMaybeAssign (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7809:21)
+      at JSXParserMixin.parseExpressionBase (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7757:23)
+      at /home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7753:39
+      at JSXParserMixin.allowInAnd (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9436:12)
+      at JSXParserMixin.parseExpression (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7753:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:4649:31)
+      at JSXParserMixin.jsxParseElementAt (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:4728:36)
+      at JSXParserMixin.jsxParseElementAt (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:4715:32)
+      at JSXParserMixin.jsxParseElementAt (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:4715:32)
+      at JSXParserMixin.jsxParseElement (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:4766:17)
+      at JSXParserMixin.parseExprAtom (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:4776:19)
+      at JSXParserMixin.parseExprSubscripts (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:8068:23)
+      at JSXParserMixin.parseUpdate (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:8053:21)
+      at JSXParserMixin.parseMaybeUnary (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:8033:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7879:61)
+      at JSXParserMixin.parseExprOps (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7884:23)
+      at JSXParserMixin.parseMaybeConditional (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7861:23)
+      at JSXParserMixin.parseMaybeAssign (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7809:21)
+      at JSXParserMixin.parseExpressionBase (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7757:23)
+      at /home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7753:39
+      at JSXParserMixin.allowInAnd (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9431:16)
+      at JSXParserMixin.parseExpression (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:7753:17)
+      at JSXParserMixin.parseReturnStatement (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:10182:28)
+      at JSXParserMixin.parseStatementContent (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9825:21)
+      at JSXParserMixin.parseStatementLike (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9794:17)
+      at JSXParserMixin.parseStatementListItem (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9774:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:10356:61)
+      at JSXParserMixin.parseBlockBody (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:10349:10)
+      at JSXParserMixin.parseBlock (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:10337:10)
+      at JSXParserMixin.parseFunctionBody (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9105:24)
+      at JSXParserMixin.parseFunctionBodyAndFinish (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9091:10)
+      at /home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:10486:12
+      at JSXParserMixin.withSmartMixTopicForbiddingContext (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:9413:14)
+      at JSXParserMixin.parseFunction (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:10485:10)
+      at JSXParserMixin.parseExportDefaultExpression (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:10946:19)
+      at JSXParserMixin.parseExport (/home/francis/Downloads/bridgeescrow-v2/frontend/node_modules/@babel/parser/lib/index.js:10867:25)
+10:20:00 PM [vite] hmr update /src/components/protected/DisputeResolution.jsx, /src/index.css
+10:20:00 PM [vite] hmr update /src/pages/Dashboard.jsx, /src/index.css
+10:23:01 PM [vite] hmr update /src/index.css, /src/pages/protected/ProtectedNew.jsx, /src/pages/protected/PaymentSelection.jsx, /src/pages/protected/Reports.jsx, /src/pages/protected/ProtectedDetail.jsx, /src/components/protected/DisputeResolution.jsx
+10:23:01 PM [vite] hmr update /src/pages/protected/ProtectedDetail.jsx, /src/index.css
+10:23:01 PM [vite] hmr update /src/pages/protected/ProtectedNew.jsx, /src/index.css
+10:23:01 PM [vite] hmr update /src/components/protected/DisputeResolution.jsx, /src/index.css
+10:23:01 PM [vite] hmr update /src/App.jsx, /src/index.css
+10:30:27 PM [vite] hmr update /src/pages/PaymentAction.jsx, /src/index.css
+10:40:11 PM [vite] hmr update /src/index.css, /src/pages/protected/ProtectedNew.jsx, /src/pages/protected/PaymentSelection.jsx, /src/pages/protected/Reports.jsx, /src/pages/protected/ProtectedDetail.jsx, /src/components/protected/DisputeResolution.jsx
+10:40:11 PM [vite] hmr update /src/pages/protected/ProtectedNew.jsx, /src/index.css
+10:40:11 PM [vite] page reload src/components/protected/DeliveryConfirmation.jsx
+10:40:11 PM [vite] page reload src/components/protected/DeliverySetup.jsx
+10:57:15 PM [vite] hmr update /src/components/CardEntry.jsx, /src/index.css
+10:57:15 PM [vite] hmr update /src/pages/protected/DeliveryNew.jsx, /src/index.css
+10:57:48 PM [vite] hmr update /src/components/protected/DeliveryConfirmation.jsx, /src/index.css
+11:44:15 PM [vite] hmr update /src/context/AuthContext.jsx, /src/index.css
+11:44:15 PM [vite] hmr update /src/App.jsx, /src/index.css
+11:44:15 PM [vite] hmr update /src/components/QuickActions.jsx, /src/index.css
+11:44:15 PM [vite] hmr update /src/components/Shell.jsx, /src/index.css
+11:44:16 PM [vite] hmr invalidate /src/context/AuthContext.jsx Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+11:44:16 PM [vite] page reload src/context/AuthContext.jsx
+11:48:37 PM [vite] hmr update /src/pages/integration/SellerApi.jsx, /src/index.css
+11:48:37 PM [vite] hmr update /src/context/AuthContext.jsx, /src/index.css
+11:48:37 PM [vite] hmr invalidate /src/context/AuthContext.jsx Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+11:48:37 PM [vite] page reload src/context/AuthContext.jsx
+11:53:22 PM [vite] hmr update /src/components/integration/SellerOrders.jsx, /src/index.css
+11:58:13 PM [vite] hmr update /src/components/QuickActions.jsx, /src/index.css
+1:05:04 AM [vite] hmr update /src/App.jsx, /src/index.css
+1:05:04 AM [vite] hmr update /src/components/Shell.jsx, /src/index.css
+1:06:32 AM [vite] hmr update /src/pages/integration/HostedCheckout.jsx, /src/index.css
+1:06:32 AM [vite] hmr update /src/components/integration/CheckoutBill.jsx, /src/index.css
+1:06:32 AM [vite] hmr update /src/components/integration/CheckoutReceipt.jsx, /src/index.css
+1:06:32 AM [vite] hmr update /src/components/developer/ApplicationForm.jsx, /src/index.css
+1:06:32 AM [vite] hmr update /src/components/developer/Credentials.jsx, /src/index.css
+1:08:58 AM [vite] hmr update /src/components/integration/SandboxPayment.jsx, /src/index.css
+1:08:58 AM [vite] hmr update /src/pages/integration/HostedCheckout.jsx, /src/index.css
+1:08:58 AM [vite] hmr update /src/components/integration/CheckoutReceipt.jsx, /src/index.css
+1:09:22 AM [vite] hmr update /src/components/integration/CheckoutReceipt.jsx, /src/index.css
+1:09:22 AM [vite] hmr update /src/components/developer/WebhookForm.jsx, /src/index.css
+1:09:22 AM [vite] hmr invalidate /src/components/developer/WebhookForm.jsx Could not Fast Refresh ("webhookEvents" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+1:09:22 AM [vite] hmr update /src/index.css, /src/components/developer/Webhooks.jsx, /src/components/developer/WebhookEndpoint.jsx
+1:10:39 AM [vite] hmr update /src/App.jsx, /src/index.css
+1:10:39 AM [vite] hmr update /src/pages/developer/DeveloperApi.jsx, /src/index.css
+1:10:39 AM [vite] hmr update /src/pages/integration/SellerApi.jsx, /src/index.css
+1:11:12 AM [vite] page reload src/pages/developer/developer.ui.test.jsx
+1:12:24 AM [vite] hmr update /src/components/developer/Credentials.jsx, /src/index.css
+1:12:24 AM [vite] hmr update /src/index.css, /src/components/developer/ApiDocumentation.jsx
+1:13:09 AM [vite] hmr update /src/index.css, /src/pages/developer/DeveloperApi.jsx, /src/components/developer/ApplicationSettings.jsx, /src/components/developer/Webhooks.jsx, /src/components/developer/SandboxPanel.jsx, /src/components/developer/Credentials.jsx
+1:13:09 AM [vite] hmr update /src/components/developer/SandboxPanel.jsx, /src/index.css

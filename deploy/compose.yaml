@@ -1,0 +1,56 @@
+services:
+  db:
+    image: mysql:8.4
+    restart: unless-stopped
+    env_file: production.env
+    environment:
+      MYSQL_DATABASE: bridgeescrow
+      MYSQL_USER: bridge
+    volumes: [mysql-data:/var/lib/mysql]
+    healthcheck:
+      test: [CMD-SHELL, 'MYSQL_PWD=$$MYSQL_ROOT_PASSWORD mysqladmin ping -h 127.0.0.1 -uroot --silent']
+      interval: 5s
+      timeout: 5s
+      retries: 30
+  backend:
+    build: {context: '..', dockerfile: deploy/Dockerfile, target: backend}
+    restart: unless-stopped
+    env_file: production.env
+    command: [sh, -c, 'flask --app wsgi db upgrade && exec gunicorn --bind 0.0.0.0:5050 --workers 2 --timeout 60 wsgi:app']
+    depends_on:
+      db: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, python, -c, 'import urllib.request; urllib.request.urlopen("http://127.0.0.1:5050/api/health", timeout=5)']
+      interval: 10s
+      timeout: 5s
+      retries: 10
+  sms-worker:
+    build: {context: '..', dockerfile: deploy/Dockerfile, target: backend}
+    restart: unless-stopped
+    env_file: production.env
+    command: [flask, --app, wsgi, deliver-sms, --watch]
+    depends_on:
+      backend: {condition: service_healthy}
+  webhook-worker:
+    build: {context: '..', dockerfile: deploy/Dockerfile, target: backend}
+    restart: unless-stopped
+    env_file: production.env
+    command: [flask, --app, wsgi, deliver-webhooks, --watch]
+    depends_on:
+      backend: {condition: service_healthy}
+  web:
+    build: {context: '..', dockerfile: deploy/Dockerfile, target: web}
+    restart: unless-stopped
+    depends_on:
+      backend: {condition: service_healthy}
+  https:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    env_file: production.env
+    ports: ['80:80', '443:443']
+    volumes: ['./Caddyfile:/etc/caddy/Caddyfile:ro', 'caddy-data:/data', 'caddy-config:/config']
+    depends_on: [web]
+volumes:
+  mysql-data:
+  caddy-data:
+  caddy-config:

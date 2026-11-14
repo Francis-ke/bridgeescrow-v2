@@ -1,0 +1,6 @@
+Single Alembic migration set for BridgeEscrow V2 (MySQL 8).
+
+  flask --app wsgi db upgrade          # apply
+  flask --app wsgi db downgrade -1     # roll back one step
+
+The baseline revision 0001 creates every table in `app/models`.
