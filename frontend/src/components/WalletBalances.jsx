@@ -23,7 +23,7 @@ export default function WalletBalances({ balances, busy, showStatements, onState
     </>}
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
       <BalanceCard title="Available Balance" amount={available}
-        description={sandbox ? 'Sandbox · Released website earnings after fees' : 'Available for protected payments'}
+        description={sandbox ? 'Sandbox · Released website earnings after fees' : 'Available to send, spend or withdraw'}
         action={sandbox ? 'View Website Transactions' : busy ? 'Loading…' : showStatements ? 'Hide Statements' : 'View Statements'}
         to={sandbox ? '/developers/api' : undefined} onClick={onStatements} />
       <BalanceCard title="Escrow Balance" amount={held}

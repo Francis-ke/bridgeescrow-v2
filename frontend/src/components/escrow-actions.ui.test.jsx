@@ -14,3 +14,19 @@ test('opens the release code input when the server sends an SMS without returnin
   await waitFor(() => expect(escrows.confirm).toHaveBeenCalledWith(7, '123456'))
   expect(screen.queryByText('Release code:')).toBeNull()
 })
+
+test('blocks repeated submissions while processing and allows retry after an error', async () => {
+  escrows.release.mockClear()
+  let reject
+  escrows.release.mockImplementationOnce(() => new Promise((resolve, fail) => { reject = fail }))
+  render(<EscrowActions escrow={{ id: 8, status: 'funded' }} reload={vi.fn()} />)
+  const release = screen.getByRole('button', { name: 'Release funds' })
+  fireEvent.click(release)
+  fireEvent.click(release)
+  expect(release.disabled).toBe(true)
+  expect(screen.getByRole('status').textContent).toContain('Processing')
+  expect(escrows.release).toHaveBeenCalledTimes(1)
+  reject(new Error('Please try again'))
+  expect((await screen.findByRole('alert')).textContent).toContain('Please try again')
+  await waitFor(() => expect(release.disabled).toBe(false))
+})

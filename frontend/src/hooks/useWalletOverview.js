@@ -13,7 +13,10 @@ export function useWalletOverview() {
   useEffect(() => {
     let active = true
     function loadBalances() {
-      wallet.get().then(({ wallet: value }) => { if (active) setBalances(value) })
+      if (showStatements) wallet.ledger().then(({ entries: value }) => {
+        if (active) setEntries(value)
+      }).catch((err) => { if (active) setError(err.message) })
+      wallet.get().then(({ wallet: value }) => { if (active) { setBalances(value); setError('') } })
         .catch((err) => { if (active) setError(err.message) })
     }
     loadBalances()
@@ -25,7 +28,7 @@ export function useWalletOverview() {
       window.removeEventListener('focus', loadBalances)
       window.removeEventListener('account-updated', loadBalances)
     }
-  }, [])
+  }, [showStatements])
 
   useEffect(() => {
     if (new URLSearchParams(location.search).get('statements') !== '1') return

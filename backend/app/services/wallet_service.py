@@ -4,6 +4,7 @@ from app.models import Wallet, LedgerEntry
 from app.models.mixins import MoneyMixin
 from app.services.ledger import credit, debit
 from app.services.wallet_lookup import wallet_by_id
+from app.services.wallet_operations import lock, scoped_key, replayed
 
 MAX_DEPOSIT_CENTS = 500_000_000
 
@@ -27,39 +28,36 @@ def wallet_for_user(wallet_id: int) -> Wallet:
 
 def credit_external(wallet: Wallet, cents: int, key: str | None) -> Wallet:
     """Credit a wallet from a confirmed external payment (M-Pesa)."""
-    if _replayed(key):
+    wallet = lock(wallet)
+    if replayed(wallet, "deposit", cents, key):
         return wallet
-    credit(wallet, cents, "deposit", "M-Pesa payment received", key=key)
+    credit(wallet, cents, "deposit", "M-Pesa payment received",
+           key=scoped_key(wallet, "deposit", key))
     db.session.commit()
     return wallet
 
 
-def _replayed(key):
-    if not key:
-        return None
-    return LedgerEntry.query.filter_by(idempotency_key=key).first()
-
-
 def deposit(user_id: int, amount, key: str | None) -> Wallet:
-    wallet = wallet_for(user_id)
-    if _replayed(key):
-        return wallet
+    wallet = lock(wallet_for(user_id))
     cents = MoneyMixin.to_cents(amount)
+    if replayed(wallet, "deposit", cents, key):
+        return wallet
     if cents > MAX_DEPOSIT_CENTS:
         raise ApiError("Deposit exceeds the per-transaction limit")
-    credit(wallet, cents, "deposit", "Wallet top-up", key=key)
+    credit(wallet, cents, "deposit", "Wallet top-up", key=scoped_key(wallet, "deposit", key))
     db.session.commit()
     return wallet
 
 
 def withdraw(user_id: int, amount, pin_ok: bool, key: str | None) -> Wallet:
-    wallet = wallet_for(user_id)
-    if _replayed(key):
-        return wallet
     if not pin_ok:
         raise ApiError("A valid transaction PIN is required", 403, "pin_required")
-    debit(wallet, MoneyMixin.to_cents(amount), "withdrawal", "Wallet withdrawal",
-          key=key)
+    wallet = lock(wallet_for(user_id))
+    cents = MoneyMixin.to_cents(amount)
+    if replayed(wallet, "withdrawal", cents, key):
+        return wallet
+    debit(wallet, cents, "withdrawal", "Wallet withdrawal",
+          key=scoped_key(wallet, "withdrawal", key))
     db.session.commit()
     return wallet
 

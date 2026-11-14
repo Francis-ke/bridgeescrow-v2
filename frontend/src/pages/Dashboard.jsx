@@ -23,8 +23,8 @@ export default function Dashboard() {
         {entries?.length === 0 ? <p className="text-sm text-slate-400">No transactions yet.</p>
           : <ul className="divide-y divide-white/10">{entries?.map((entry) => <li key={entry.id}
             className="flex flex-wrap items-center justify-between gap-3 py-3 text-sm">
-            <div><p className="capitalize">{entry.description || entry.entry_type}</p>
-              <p className="mt-1 text-xs text-slate-400">{entry.category_label} · {entry.account_bucket} · {entry.reference}</p></div>
+            <div className="min-w-0"><p className="break-words capitalize">{entry.description || entry.entry_type}</p>
+              <p className="mt-1 break-all text-xs text-slate-400">{entry.category_label} · {entry.account_bucket} · {entry.reference}</p></div>
             <p className={entry.direction === 'credit' ? 'text-teal-400' : 'text-slate-200'}>
               {entry.direction === 'credit' ? '+' : '−'} Ksh {(Number(entry.amount_cents) / 100)
                 .toLocaleString('en-KE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}

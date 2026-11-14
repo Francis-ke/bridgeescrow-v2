@@ -1,6 +1,6 @@
 # BridgeEscrow V2
 
-Full-stack escrow platform: **Flask + MySQL + Pipenv** API, **React 18 + Vite + Tailwind** SPA.
+Full-stack escrow platform: **Flask + MySQL + Python venv** API, **React 18 + Vite + Tailwind** SPA.
 Every handwritten source file is **under 80 lines**.
 
 ## Requirements (Ubuntu 20.04+)
@@ -8,7 +8,6 @@ Every handwritten source file is **under 80 lines**.
 ```bash
 sudo apt update
 sudo apt install -y python3 python3-venv python3-pip mysql-server nodejs npm
-pip install --user pipenv
 ```
 
 Node **18+** is required by Vite 5 (check with `node -v`).
@@ -26,8 +25,9 @@ sudo mysql -e "GRANT ALL PRIVILEGES ON bridgeescrow_v2.* TO 'bridge'@'localhost'
 
 ```bash
 cd backend
-pipenv install --dev
-pipenv shell
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements-dev.txt
 cp .env.example .env          # edit DB credentials / secrets
 flask --app wsgi db upgrade   # creates every table
 python -m flask --app wsgi run --port 5050
@@ -49,14 +49,25 @@ Vite proxies `/api` to `http://127.0.0.1:5050`.
 
 ```bash
 cd backend
-python -m pytest -q           # 43 tests, SQLite in-memory, no network
+python -m pytest tests -q     # isolated SQLite databases; mocked external services
 ```
 
-## Docker MySQL (alternative)
+Frontend checks:
 
 ```bash
-docker compose up -d db
-DATABASE_URL="mysql+pymysql://bridge:bridge@127.0.0.1:3306/bridgeescrow_v2" flask --app wsgi db upgrade
+cd frontend
+npm test
+npm run build
+```
+
+## Production containers
+
+Copy `deploy/production.env.example` to `deploy/production.env` and configure
+its database credentials, signing secrets, domain and provider settings. See
+[deployment instructions](docs/PHONE_USSD_SMS.md) before enabling live payments.
+
+```bash
+docker compose -f deploy/compose.yaml up -d --build
 ```
 
 ## Main endpoints

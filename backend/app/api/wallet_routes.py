@@ -13,10 +13,13 @@ bp = Blueprint("wallet", __name__, url_prefix="/api/wallet")
 def snapshot(user_id: int, wallet=None) -> dict:
     if wallet is None:
         wallet = wallet_service.wallet_for(user_id)
+    if wallet.user_id != user_id:
+        from app.core.errors import ApiError
+        raise ApiError("Wallet does not belong to this account", 403, "forbidden")
     from app.services.protected.reports import incoming as incoming_balance
     from app.services.developer.merchant_balances import for_owner
     incoming = incoming_balance(user_id)
-    return {"payment_mode": current_app.config["PAYMENT_MODE"], "website_sandbox": for_owner(user_id), "incoming_escrow": wallet_service.fmt(incoming), "available": wallet_service.fmt(wallet.available_cents),
+    return {"user_id": user_id, "payment_mode": current_app.config["PAYMENT_MODE"], "website_sandbox": for_owner(user_id), "incoming_escrow": wallet_service.fmt(incoming), "available": wallet_service.fmt(wallet.available_cents),
             "escrow": wallet_service.fmt(wallet.escrow_cents),
             "currency": wallet.currency}
 

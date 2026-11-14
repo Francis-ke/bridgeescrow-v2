@@ -16,8 +16,14 @@ export default function ProviderDeposit({ mode }) {
     const pending = data.payments.find((row) => row.provider === mode && row.status === 'pending' && !row.checkout_order_id)
     if (pending) { setPayment(pending); setAmount(String(pending.amount_cents / 100)); setMessage('A previous payment request is still pending. Check its status before starting another.') }
   }).catch((err) => setError(err.message)) }, [mode])
+  useEffect(() => {
+    if (!payment || ['confirmed', 'failed'].includes(payment.status)) return
+    const timer = setInterval(refresh, 5000)
+    window.addEventListener('focus', refresh)
+    return () => { clearInterval(timer); window.removeEventListener('focus', refresh) }
+  }, [payment?.id, payment?.reference, payment?.status])
   async function submit(event) {
-    event.preventDefault(); setBusy(true); setError('')
+    event.preventDefault(); if (busy) return; setBusy(true); setError('')
     try {
       const data = await phoneApi.deposit(amount, key.current)
       setPayment(data.payment); setMessage(data.message)

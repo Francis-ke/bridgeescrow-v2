@@ -29,23 +29,6 @@ def test_deposit_withdraw_and_retries_update_balances_once(client, buyer):
     assert {row['entry_type'] for row in entries} == {'deposit', 'withdrawal'}
 
 
-def test_send_creates_funded_escrow_and_notifies_receiver(client, buyer, seller):
-    execute(client, buyer, 'deposit', '500')
-    number = db.session.get(User, seller['id']).card_number
-    sent = execute(client, buyer, 'send', '100', recipient_card=number)
-    assert sent.status_code == 200
-    assert sent.json['wallet']['available'] == '400.00'
-    assert sent.json['wallet']['escrow'] == '100.00'
-    eid = sent.json['receipt']['escrow_id']
-    received = client.get('/api/escrows?direction=received&view=progress', headers=auth(seller)).json['escrows']
-    assert received[0]['id'] == eid and received[0]['status'] == 'funded'
-    assert client.get('/api/wallet', headers=auth(seller)).json['wallet']['incoming_escrow'] == '99.00'
-    assert client.get('/api/notifications', headers=auth(seller)).json['unread_count'] == 1
-    code = client.post(f'/api/escrows/{eid}/release', headers=auth(buyer)).json['demo_code']
-    assert client.post(f'/api/escrows/{eid}/confirm', headers=auth(buyer), json={'code': code}).status_code == 200
-    balance = client.get('/api/wallet', headers=auth(seller)).json['wallet']
-    assert balance['available'] == '99.00'
-    assert balance['incoming_escrow'] == '0.00'
 
 
 def test_failed_payments_do_not_change_balance_or_leave_receipts(client, buyer, seller):

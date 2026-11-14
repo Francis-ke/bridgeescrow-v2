@@ -16,6 +16,7 @@ import Reports from './pages/protected/Reports'
 import AdminPayment from './pages/protected/AdminPayment'
 import AdminPortal from './pages/AdminPortal'
 import PhoneChannels from './pages/PhoneChannels'
+import Account from './pages/Account'
 import DeveloperApi from './pages/developer/DeveloperApi'
 import HostedCheckout from './pages/integration/HostedCheckout'
 import SellerApi from './pages/integration/SellerApi'
@@ -28,6 +29,7 @@ export default function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/" element={<RequireAuth><Dashboard /></RequireAuth>} />
+        <Route path="/account" element={<RequireAuth><Account /></RequireAuth>} />
         <Route path="/phone" element={<RequireAuth><PhoneChannels /></RequireAuth>} />
         <Route path="/developers/api" element={<RequireAuth><DeveloperApi /></RequireAuth>} />
         <Route path="/developers/api/legacy" element={<RequireAuth><SellerApi /></RequireAuth>} />

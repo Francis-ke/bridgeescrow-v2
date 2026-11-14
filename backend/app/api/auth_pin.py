@@ -5,7 +5,7 @@ from app.core.decorators import login_required
 from app.core.jwt import current_user_id
 from app.core.security import new_salt, hash_pin
 from app.models import User
-from app.schemas.auth import PinSchema
+from app.schemas.auth import PinSchema, ProfileSchema
 from app.api.auth_routes import bp
 
 
@@ -25,4 +25,14 @@ def set_pin():
 @login_required
 def me():
     user = db.session.get(User, current_user_id())
+    return {"user": user.to_dict(include_card_security=True)}
+
+
+@bp.put("/me")
+@login_required
+def update_profile():
+    data = ProfileSchema().load(request.get_json(silent=True) or {})
+    user = db.session.get(User, current_user_id())
+    user.full_name = data["full_name"].strip()
+    db.session.commit()
     return {"user": user.to_dict(include_card_security=True)}

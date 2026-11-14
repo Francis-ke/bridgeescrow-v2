@@ -10,7 +10,7 @@ export default function Shell({ children }) {
   const { open, setOpen, ref: menu } = useDisclosure()
   const navigate = useNavigate()
   const links = user
-    ? [['/', 'Home'], ['/escrows', 'My escrows'], ['/developers/api', 'Developer API'], ['/phone', 'Phone & USSD']]
+    ? [['/', 'Home'], ['/account', 'My account'], ['/escrows', 'My escrows'], ['/developers/api', 'Developer API'], ['/phone', 'Phone & USSD']]
     : [['/login', 'Sign in'], ['/register', 'Create account']]
 
   if (user?.role === 'admin' && !links.some(([path]) => path === '/admin/reports')) links.push(['/admin', 'Administrator portal'])

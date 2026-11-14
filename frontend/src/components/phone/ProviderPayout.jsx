@@ -16,8 +16,14 @@ export default function ProviderPayout({ mode }) {
     catch (err) { setError(err.message) }
   }
   useEffect(() => { refresh() }, [])
+  useEffect(() => {
+    if (!payout || ['succeeded', 'failed'].includes(payout.status)) return
+    const timer = setInterval(refresh, 5000)
+    window.addEventListener('focus', refresh)
+    return () => { clearInterval(timer); window.removeEventListener('focus', refresh) }
+  }, [payout?.id, payout?.reference, payout?.status])
   async function submit(event) {
-    event.preventDefault(); setBusy(true); setError('')
+    event.preventDefault(); if (busy) return; setBusy(true); setError('')
     try {
       const data = await post('/payouts', { amount, pin, idempotency_key: key.current })
       setPayout(data.payout); setPin(''); await refresh()

@@ -6,6 +6,7 @@ export const auth = {
   resendRegistration: (email) => post('/auth/register/resend', { email }),
   login: (d) => post('/auth/login', d),
   me: () => get('/auth/me'),
+  updateProfile: (data) => put('/auth/me', data),
   setPin: (pin) => post('/auth/pin', { pin }),
   forgotPassword: (email) => post('/auth/password/forgot', { email }),
   resetPassword: (d) => post('/auth/password/reset', d),

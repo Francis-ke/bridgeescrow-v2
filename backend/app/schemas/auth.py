@@ -50,3 +50,12 @@ class PasswordResetSchema(OtpSchema):
 
 class PinSchema(Schema):
     pin = fields.Str(required=True, validate=validate.Regexp(r"^\d{4}$"))
+
+
+class ProfileSchema(Schema):
+    full_name = fields.Str(required=True, validate=validate.Length(min=3, max=120))
+
+    @validates("full_name")
+    def check_name(self, value, **kwargs):
+        if len(value.strip()) < 3:
+            raise ValidationError("Enter a name with at least 3 characters")

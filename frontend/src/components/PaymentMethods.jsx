@@ -31,7 +31,8 @@ export default function PaymentMethods({ title, kind, allowMpesa = false }) {
   return (
     <div className="mx-auto max-w-lg space-y-5">
       <h1 className="text-2xl font-semibold tracking-tight">{title}</h1>
-      {channel.payment_mode === 'simulated' && <details className="text-xs text-slate-500"><summary className="cursor-pointer">Payment environment</summary><p className="mt-2">Payments in this environment are simulated. No bank card is charged and no real M-PESA transfer is made.</p></details>}
+      {channel.payment_mode === 'simulated' && kind !== 'send' && <details className="text-xs text-slate-500"><summary className="cursor-pointer">Payment environment</summary><p className="mt-2">Payments in this environment are simulated. No bank card is charged and no real M-PESA transfer is made.</p></details>}
+      {kind === 'send' && <p className="text-sm text-slate-400">Money goes directly from your wallet to the receiving account. The full amount is available immediately.</p>}
       {allowMpesa && <div className="grid grid-cols-2 gap-2 rounded-xl border border-white/10 bg-navy-800/70 p-1.5" aria-label="Payment method">
         {[['card', 'Card'], ['mpesa', 'M-PESA']].map(([value, label]) => <button key={value} type="button"
           aria-pressed={method === value} onClick={() => setMethod(value)}

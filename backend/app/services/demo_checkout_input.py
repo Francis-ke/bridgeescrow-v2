@@ -36,7 +36,7 @@ def recipient_for(uid, data, cents):
         raise ApiError('Recipient account not found; enter their registered virtual card, email or account number', 404, 'recipient_not_found')
     if recipient and (recipient.id == uid or not recipient.is_active or not recipient.email_verified):
         raise ApiError('Choose another active, verified recipient', 422, 'invalid_recipient')
-    if recipient and cents < 1000:
+    if recipient and data['kind'] == 'buy' and cents < 1000:
         raise ApiError('Minimum protected payment is KES 10.00', 422, 'invalid_amount')
     if data['method'] == 'mpesa' and not target:
         raise ApiError('Enter an M-PESA phone number', 422, 'phone_required')

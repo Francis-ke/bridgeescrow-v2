@@ -14,7 +14,8 @@ function token() {
 
 export async function request(path, { method = 'GET', body, auth = true, headers: extraHeaders = {} } = {}) {
   const headers = { 'Content-Type': 'application/json', ...extraHeaders }
-  if (auth && token()) headers.Authorization = `Bearer ${token()}`
+  const requestToken = auth ? token() : ''
+  if (requestToken) headers.Authorization = `Bearer ${requestToken}`
   const res = await fetch(`${BASE}/api${path}`, {
     method,
     headers,
@@ -26,8 +27,13 @@ export async function request(path, { method = 'GET', body, auth = true, headers
   catch { throw new ApiError(res.ok ? 'The server returned an invalid response' : 'The server could not complete this request. Please try again.', res.status, 'invalid_response') }
   if (!res.ok) {
     const err = data.error || {}
+    if (res.status === 401 && ['token_expired', 'token_invalid'].includes(err.code) &&
+        requestToken && requestToken === token()) {
+      window.dispatchEvent(new Event('session-expired'))
+    }
     throw new ApiError(err.message || 'Request failed', res.status, err.code)
   }
+  if (auth && method !== 'GET') window.dispatchEvent(new Event('account-updated'))
   return data
 }
 

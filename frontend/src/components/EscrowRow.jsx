@@ -11,13 +11,13 @@ const TONE = {
 export default function EscrowRow({ escrow, onUpdate }) {
   return (
     <li className="py-4 text-sm">
-      <div className="flex items-center justify-between gap-3">
+      <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
         <Link to={`/escrows/${escrow.id}`} className="min-w-0">
           <p className="truncate font-medium text-white">{escrow.title}</p>
           {escrow.protection && <p className="text-xs text-teal-300">{escrow.protection.label} · {escrow.protection.state.replaceAll("_", " ")}</p>}
           <p className="text-xs text-slate-500">{escrow.reference}</p>
         </Link>
-        <div className="text-right">
+        <div className="sm:text-right">
           <p className="font-semibold">KES {escrow.amount}</p>
           <p className={`text-xs uppercase ${TONE[escrow.status] || 'text-slate-400'}`}>{escrow.status}</p>
         </div>

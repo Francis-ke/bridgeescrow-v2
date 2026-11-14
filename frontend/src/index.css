@@ -10,3 +10,14 @@ body {
     "Segoe UI",
     sans-serif;
 }
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; min-width: 320px; overflow-wrap: anywhere; }
+  input, select, textarea { max-width: 100%; min-width: 0; font-size: 16px; }
+  button, a, input, select, textarea { touch-action: manipulation; }
+  button:disabled { cursor: wait; opacity: 0.6; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; }
+  }
+}

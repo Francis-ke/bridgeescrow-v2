@@ -22,4 +22,4 @@ class DemoTransaction(TimestampMixin, db.Model):
         return {"reference": self.reference, "kind": self.kind, "method": self.method,
                 "amount": MoneyMixin.from_cents(self.amount_cents), "destination": self.destination,
                 "last4": self.last4, "createdAt": iso(self.created_at), "status": "completed",
-                "demo": True, "escrow_id": self.escrow_id}
+                "demo": self.kind != "send", "escrow_id": self.escrow_id}

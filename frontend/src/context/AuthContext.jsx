@@ -8,9 +8,18 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    if (!localStorage.getItem('be_token')) { setLoading(false); return }
-    auth.me().then((d) => setUser(d.user)).catch(() => localStorage.removeItem('be_token'))
-      .finally(() => setLoading(false))
+    let active = true
+    const sessionToken = localStorage.getItem('be_token')
+    const expired = () => { localStorage.removeItem('be_token'); setUser(null) }
+    window.addEventListener('session-expired', expired)
+    if (!sessionToken) setLoading(false)
+    else auth.me().then((data) => {
+      if (active && sessionToken === localStorage.getItem('be_token')) setUser(data.user)
+    }).catch((error) => {
+      if (active && [401, 403].includes(error.status) &&
+          sessionToken === localStorage.getItem('be_token')) expired()
+    }).finally(() => { if (active) setLoading(false) })
+    return () => { active = false; window.removeEventListener('session-expired', expired) }
   }, [])
 
   useEffect(() => {

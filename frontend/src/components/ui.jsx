@@ -2,7 +2,7 @@ export const cx = (...c) => c.filter(Boolean).join(' ')
 
 export function Card({ children, className = '' }) {
   return (
-    <div className={cx('rounded-2xl border border-white/10 bg-navy-800/70 p-6 shadow-xl', className)}>
+    <div className={cx('rounded-2xl border border-white/10 bg-navy-800/70 p-4 shadow-xl sm:p-6', className)}>
       {children}
     </div>
   )
@@ -29,7 +29,7 @@ export function Button({ children, variant = 'primary', className = '', ...props
   return (
     <button
       {...props}
-      className={cx('rounded-lg px-4 py-2 text-sm font-semibold transition disabled:opacity-50',
+      className={cx('rounded-lg px-4 py-2 text-sm font-semibold transition min-h-11 disabled:cursor-wait disabled:opacity-50',
         styles[variant], className)}
     >
       {children}
@@ -39,7 +39,7 @@ export function Button({ children, variant = 'primary', className = '', ...props
 
 export function Alert({ children }) {
   if (!children) return null
-  return <p className="rounded-lg bg-red-500/10 px-3 py-2 text-sm text-red-300">{children}</p>
+  return <p role="alert" className="rounded-lg bg-red-500/10 px-3 py-2 text-sm text-red-300">{children}</p>
 }
 
 export function Kpi({ label, value, sub }) {

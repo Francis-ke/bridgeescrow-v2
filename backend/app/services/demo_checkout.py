@@ -12,10 +12,9 @@ from app.models.demo_transaction import DemoTransaction
 from app.services.wallet_service import wallet_for
 from app.services.notifications import add
 
-
 def checkout(uid, payload):
     from flask import current_app
-    if current_app.config['PAYMENT_MODE'] != 'simulated':
+    if current_app.config['PAYMENT_MODE'] != 'simulated' and payload.get('kind') != 'send':
         raise ApiError('Demo transactions are disabled in provider mode', 403, 'simulation_disabled')
     data = CheckoutSchema().load(payload)
     cents = int(data['amount'] * 100)
@@ -52,13 +51,16 @@ def checkout(uid, payload):
     if data['kind'] != 'deposit':
         condition = condition & (Wallet.available_cents >= cents)
         values = {'available_cents': Wallet.available_cents - cents}
-        entry_type, direction = ('hold' if recipient else 'withdrawal' if data['kind'] == 'withdraw' else 'purchase'), 'debit'
-        if recipient:
+        entry_type, direction = ('transfer' if data['kind'] == 'send' else 'hold' if recipient else 'withdrawal' if data['kind'] == 'withdraw' else 'purchase'), 'debit'
+        if recipient and data['kind'] != 'send':
             values['escrow_cents'] = Wallet.escrow_cents + cents
     if db.session.execute(update(Wallet).where(condition).values(**values)).rowcount != 1:
         db.session.rollback()
         raise ApiError('Insufficient funds in your wallet', 409, 'insufficient_funds')
-    if recipient:
+    if recipient and data['kind'] == 'send':
+        from app.services.direct_transfer import receive
+        receive(sender, recipient, cents, receipt)
+    elif recipient:
         escrow = Escrow(reference=Escrow.new_reference(), buyer_id=uid, seller_id=recipient.id,
             amount_cents=cents, fee_cents=cents // 100, title='Purchase' if data['kind'] == 'buy' else 'Money transfer', status='funded')
         db.session.add(escrow)
